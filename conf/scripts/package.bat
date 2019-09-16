@@ -6,4 +6,4 @@ echo "pathMSBuild: %pathMSBuild%"
 echo "pathNuget: %pathMSBuild%"
 echo "solutionPath: %solutionPath%"
 
-%pathMSBuild% %solutionPath% /t:Package /p:PackageFileName=BlogEngine.zip 
+%pathMSBuild% %solutionPath% /t:clean;build;package /p:PackageFileName=BlogEngine.zip 
