@@ -4,7 +4,15 @@ pipeline {
         label 'WINDOWS'
     }
 
-    stages{     
+    stages{   
+
+        stage('CleanWS') {
+            steps {
+                script {
+                    cleanWs()
+                } 
+            }
+        }  
         stage('Checkout') {
             steps {
 
