@@ -1,4 +1,4 @@
-set pathNUnitExe="C:\Program Files (x86)\NUnit.org\nunit-console\nunit3-console.exe"
+set pathNUnitExe="C:\Program Files (x86)\NUnit 2.7.1\bin\nunit-console.exe"
 
 set pathProjectToTest=%1
 set projectToTestName=%2
