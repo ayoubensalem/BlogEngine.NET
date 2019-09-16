@@ -29,16 +29,16 @@ pipeline {
                 bat '%workspace%\\conf\\scripts\\build.bat "%workspace%\\BlogEngine\\BlogEngine.sln"'
             }
         }
-        stage('Unit Tests') {
+        stage('Package') {
             steps {
-                bat '%workspace%\\conf\\scripts\\nunit.bat "%workspace%\\BlogEngine\\BlogEngine.Tests\\" "BlogEngine.Tests.csproj"'
+                bat '%workspace%\\conf\\scripts\\package.bat "%workspace%\\BlogEngine\\BlogEngine.sln"'
             }
         }
-       stage('Sonar') {
-            steps {
-                bat '%workspace%\\conf\\scripts\\sonar.bat "%workspace%\\BlogEngine\\BlogEngine.sln"'
-            }
-        }
+    //    stage('Sonar') {
+    //         steps {
+    //             bat '%workspace%\\conf\\scripts\\sonar.bat "%workspace%\\BlogEngine\\BlogEngine.sln"'
+    //         }
+    //     }
         
     }
 }
